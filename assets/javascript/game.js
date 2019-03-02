@@ -1,4 +1,4 @@
-var guessingWords = ["hello", "hi"];
+var guessingWords = ["butterfly", "fakelove", "dna", "danger", "justoneday"];
 
 var randomNum = Math.floor(Math.random() * guessingWords.length);
 
@@ -9,6 +9,9 @@ var wins = 0;
 var lettersGuessed = [];
 
 var guessedCorrectly = loadGuessedCorrectly(guessingWords, [], randomNum);
+
+var pageUnderScore = document.getElementById("underscores");
+
 
 function loadGuessedCorrectly(wordArray, underArray, randomNumber){
     for(var i = 0; i < wordArray[randomNumber].length; i++){
@@ -55,6 +58,7 @@ function startGame(){
                 var curr = indexOfAll(guessingWords[randomNum], letter);
                 for(var i = 0; i < curr.length; i++){
                     guessedCorrectly[curr[i]] = letter;
+                    pageUnderScore.innerHTML = guessedCorrectly.join(" ");
                 }
                 console.log(guessedCorrectly);
             }
@@ -69,13 +73,16 @@ function startGame(){
         }
 
         if(guessedCorrectly.join("") == guessingWords[randomNum]){
+            location.reload();
             alert("you win!");
         }
 
         if(remainingGuesses == 0){
+            location.reload();
             alert("you lose");
         }
     }
 }
+pageUnderScore.innerHTML = guessedCorrectly.join(" ");
 
 startGame();
