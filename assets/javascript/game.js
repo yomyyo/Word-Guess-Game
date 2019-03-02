@@ -102,4 +102,4 @@ function main(){
     }
 }
 
-startGame();
+main();
