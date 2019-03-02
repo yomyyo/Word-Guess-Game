@@ -57,49 +57,46 @@ function indexOfAll(word, letter){
     return indexes;
 }
 
-//main funtion, used to play the game
-function main(){
-    document.onkeyup = function(event){ 
-        var letter = event.key;
 
-        //check to see if a correct letter has already been guessed
-        if(!insideChar(letter, guessedCorrectly)){
+//main code to play game
+document.onkeyup = function(event){ 
+    var letter = event.key;
 
-            //check to see if the letter is inside selected word, if so, add it to array guessedCorrectly
-            if(insideString(letter, guessingWords[randomNum])){
-                var curr = indexOfAll(guessingWords[randomNum], letter);
-                for(var i = 0; i < curr.length; i++){
-                    guessedCorrectly[curr[i]] = letter;
-                    pageUnderScore.innerHTML = guessedCorrectly.join(" ");
-                }
+    //check to see if a correct letter has already been guessed
+    if(!insideChar(letter, guessedCorrectly)){
+
+        //check to see if the letter is inside selected word, if so, add it to array guessedCorrectly
+        if(insideString(letter, guessingWords[randomNum])){
+            var curr = indexOfAll(guessingWords[randomNum], letter);
+            for(var i = 0; i < curr.length; i++){
+                guessedCorrectly[curr[i]] = letter;
+                pageUnderScore.innerHTML = guessedCorrectly.join(" ");
             }
-        }
-        
-        //check to see if a wrong letter has already been guessed
-        if(!insideChar(letter, lettersGuessed)){
-
-            //if the letter is wrong, add it to the lettersGuessed and decrement number of guesses
-            if(!insideString(letter, guessingWords[randomNum])){
-                lettersGuessed.push(letter);
-                pageWordBox.innerHTML = lettersGuessed.join(" ");
-                remainingGuesses--;
-                pageGuessedWrong.innerHTML = remainingGuesses + " guesses remaining";
-                console.log(lettersGuessed);
-            }
-        }
-
-        //if user wins, reload the page
-        if(guessedCorrectly.join("") == guessingWords[randomNum]){
-            location.reload();
-            alert("you win!");
-        }
-
-        //if the user loses, reload the page.
-        if(remainingGuesses == 0){
-            location.reload();
-            alert("you lose");
         }
     }
-}
+    
+    //check to see if a wrong letter has already been guessed
+    if(!insideChar(letter, lettersGuessed)){
 
-main();
+        //if the letter is wrong, add it to the lettersGuessed and decrement number of guesses
+        if(!insideString(letter, guessingWords[randomNum])){
+            lettersGuessed.push(letter);
+            pageWordBox.innerHTML = lettersGuessed.join(" ");
+            remainingGuesses--;
+            pageGuessedWrong.innerHTML = remainingGuesses + " guesses remaining";
+            console.log(lettersGuessed);
+        }
+    }
+
+    //if user wins, reload the page
+    if(guessedCorrectly.join("") == guessingWords[randomNum]){
+        location.reload();
+        alert("you win!");
+    }
+
+    //if the user loses, reload the page.
+    if(remainingGuesses == 0){
+        location.reload();
+        alert("you lose");
+    }
+}
