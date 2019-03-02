@@ -1,21 +1,76 @@
 h1{
-    font-size: 150px;
-    margin: 10px;
+    font-size: 120px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: aliceblue;
+    background-color: #333;
+}
+
+h2{
+    font-size: 50px;
     text-align: center;
 }
 
 .container{
-    margin: 10%
+    margin: 15%;
+    margin-top: 0;
+}
+
+#secContainer{
+    float: right;
+    margin: 10px;
 }
 
 #btsImage{
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 10px;;
+    margin-top: 20px;
     display: block;
-    width: 20%;
+    float: left;
+    width: 35%;
 }
 
 #underscores{
-    font-size: 100px;
+    margin: 0 auto;
+    font-size: 80px;
+    margin-bottom: 10px;
     text-align: center;
+    margin-top: 20px;
+}
+
+#guessedWrong{
+    font-size: 50px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+h3{
+    font-size: 50px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#wordBox{
+    margin: 0 auto;
+    font-size: 50px;
+    text-align: center;
+    border: 1px black solid;
+    height: 70px;
+    width: 50%;
+    margin-top: 20px;
+}
+
+#myFooter{
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    bottom: 0;
 }

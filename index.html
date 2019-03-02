@@ -4,24 +4,46 @@
 <head>
     
     <meta charset="UTF-8">
-
     <title>Word Guess Game</title>
+
+    <!--reset.css-->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+    <!--style.css-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1 id = "header">Guess that BTS song!</h1>
 
+    <!--header-->
+    <h1 id="header">Guess that BTS song!</h1>
+
+    <!--contents of page-->
+    <div class="container">
         <div>
             <img id="btsImage" src="assets/images/bts.jpg" alt=BTS>
         </div>
 
-        <div id = "underscores"></div>
+        <!--a second container to keep the game away from the image-->
+        <div id="secContainer">
 
-        <div id = guessedWrong></div>
+            <h2>Press any key to get started!</h2>
+
+            <div id="underscores"></div>
+
+            <div id=guessedWrong></div>
+
+            <h3>Wrong Guesses: </h3>
+
+            <div id="wordBox"></div>
+            
+        </div>
+
+        <!--javascript-->
         <script type="text/javascript" src="assets/javascript/game.js"></script>
     </div>
+    
+     <!--Footer-->
+     <footer id="myFooter">Copyright &copy; Sammy Tang</footer>
 </body>
 </html>
