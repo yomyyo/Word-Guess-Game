@@ -1,5 +1,5 @@
 //Global Variables
-var guessingWords = ["butterfly", "fire", "dna", "danger", "idol", "dope"];
+var guessingWords = ["butterfly", "fire", "dna", "danger", "idol", "dope, fakelove, gogo, anpanman, coffee, saveme, lost"];
 var randomNum = Math.floor(Math.random() * guessingWords.length);
 var remainingGuesses = 5;
 var wins = 0;
