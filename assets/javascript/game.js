@@ -1,7 +1,7 @@
 //Global Variables
 var guessingWords = ["sammy", "danny", "tommy", "charlie", "simon", "aaron", "dylan", "emily", "christy", "cindy", "jenny", "anthony", "tee", "kai", "binh", "tony", "kaylee", "athen", "bryant", "tim", "kim", "steve", "stephanie", "celibell", "jimmy", "tammie", "liz", "jerome", 'tai', 'andy'];
 var randomNum = Math.floor(Math.random() * guessingWords.length);
-var remainingGuesses = 5;
+var remainingGuesses = 7;
 var wins = 0;
 var lettersGuessed = [];
 var guessedCorrectly = loadGuessedCorrectly(guessingWords, [], randomNum);
