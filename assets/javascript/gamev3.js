@@ -1,5 +1,5 @@
 //Global Variables
-var guessingWords = ["sammy", "danny", "tommy", "charlie", "simon", "aaron", "dylan", "emily", "christy", "cindy", "jenny", "anthony", "tee", "kai", "binh", "tony", "kaylee", "athen", "bryant", "tim", "kim", "steve", "stephanie", "celibell", "jimmy", "tammie", "liz", "jerome", 'tai', 'andy'];
+var guessingWords = ["sammy", "danny", "tommy", "charlie", "simon", "aaron", "dylan", "emily", "christy", "cindy", "jenny", "anthony", "tee", "kai", "binh", "tony", "kaylee", "athen", "bryant", "tim", "kim", "steve", "stephanie", "celibell", "jimmy", "tammie", "liz", "jerome", 'tai', 'andy', 'sumer'];
 var randomNum = Math.floor(Math.random() * guessingWords.length);
 var remainingGuesses = 7;
 var wins = 0;
